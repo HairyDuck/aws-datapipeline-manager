@@ -3,7 +3,6 @@
 <head>
   <title>AWS DataPipeline Manager</title>
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-  
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -19,6 +18,8 @@
           <tr>
             <th scope="col">Name</th>
             <th scope="col">Pipeline ID</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +27,13 @@
             <tr>
               <td><a href="/pipeline/<%= pipeline.id %>"><%= pipeline.name %></a></td>
               <td><%= pipeline.id %></td>
+              <td><%= pipeline.pipelineState %></td>
+              <td>
+                <form action="/delete" method="post">
+                  <input type="hidden" name="pipelineId" value="<%= pipeline.id %>">
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </td>
             </tr>
           <% }); %>
         </tbody>
