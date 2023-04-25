@@ -1,3 +1,4 @@
+
 # 🚀 AWS DataPipeline Manager
 
 AWS DataPipeline Manager is an open-source web application that allows you to view, edit, and manage your AWS DataPipeline jobs. With the built-in DataPipeline console being turned off on May 1st, 2023, this project aims to provide a user-friendly alternative for managing your DataPipeline jobs. 📅
@@ -15,6 +16,10 @@ AWS DataPipeline Manager is an open-source web application that allows you to vi
 - NPM >= 6.x 📦
 - An AWS account with DataPipeline access 🔑
 
+
+## Screenshots
+![AWS DataPipeline Manager - Pipeline List View](https://i.imgur.com/5C02eLY.png)
+![AWS DataPipeline Manager - Job edit](https://i.imgur.com/ZUe2fHt.png)
 ## Installation
 
 1. Clone the repository:
