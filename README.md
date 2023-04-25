@@ -67,6 +67,8 @@ AWS DataPipeline Manager is an open-source web application that allows you to vi
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for bug reports, feature requests, or any other improvements. 💪
 
+Before contributing, please review our [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing Guidelines](CONTRIBUTING.md).
+
 ## License
 
 This project is open-source and available under the [MIT License](LICENSE). 📝
