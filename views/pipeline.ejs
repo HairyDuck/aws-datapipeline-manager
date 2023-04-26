@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AWS DataPipeline - <%= pipelineId %></title>
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="/">AWS DataPipeline Manager</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="my-4"><%= pipelineId %></h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Pipeline Definition</h2>
+        <form action="/pipeline/<%= pipelineId %>" method="post">
+          <div class="form-group">
+            <label for="pipelineObjects">Pipeline Objects (JSON):</label>
+            <textarea name="pipelineObjects" class="form-control" rows="20" required><%= JSON.stringify(pipelineDefinition.pipelineObjects, null, 2) %></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h2>Pipeline Actions</h2>
+        <form action="/delete" method="post">
+          <input type="hidden" name="pipelineId" value="<%= pipelineId %>">
+          <button type="submit" class="btn btn-danger">Delete Pipeline</button>
+        </form>
+        <div class="mb-4">
+          <button class="btn btn-secondary" id="status-button">Show Status</button>
+        </div>
+        <div id="status-section"></div>
+
+        <script>
+          const statusButton = document.querySelector('#status-button');
+          const statusSection = document.querySelector('#status-section');
+
+          statusButton.addEventListener('click', async () => {
+            const pipelineId = '<%= pipelineId %>';
+            const response = await fetch(`/status/${pipelineId}`);
+            const data = await response.json();
+            const status = data.pipelineDescriptionList[0].fields[0].stringValue;
+            statusSection.innerHTML = `
+              <div class="alert alert-info mt-4" role="alert">
+                Pipeline status: ${status}
+              </div>
+            `;
+          });
+        </script>
+      </div>
+    </div>
+
+    <a href="/" class="btn btn-secondary mt-4">Back to Pipelines</a>
+  </div>
+
+  <script src="/static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
