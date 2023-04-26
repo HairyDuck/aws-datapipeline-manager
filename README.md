@@ -1,5 +1,9 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/hairyduck/aws-datapipeline-manager/badge)](https://www.codefactor.io/repository/github/hairyduck/aws-datapipeline-manager)
+![GitHub top language](https://img.shields.io/github/languages/top/HairyDuck/aws-datapipeline-manager)
+![GitHub](https://img.shields.io/github/license/HairyDuck/aws-datapipeline-manager)
+![GitHub contributors](https://img.shields.io/github/contributors/HairyDuck/aws-datapipeline-manager)
+
 # ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)🚀 AWS Data Pipeline Manager
 
 AWS DataPipeline Manager is an open-source web application that allows you to view, edit, and manage your AWS DataPipeline jobs. With the built-in DataPipeline console being turned off on May 1st, 2023, this project aims to provide a user-friendly alternative for managing your DataPipeline jobs. 📅
