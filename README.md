@@ -1,4 +1,5 @@
-# ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)🚀 AWS DataPipeline Manager
+
+# ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)🚀 AWS Data Pipeline Manager
 
 AWS DataPipeline Manager is an open-source web application that allows you to view, edit, and manage your AWS DataPipeline jobs. With the built-in DataPipeline console being turned off on May 1st, 2023, this project aims to provide a user-friendly alternative for managing your DataPipeline jobs. 📅
 
@@ -62,6 +63,16 @@ AWS DataPipeline Manager is an open-source web application that allows you to vi
    By default, the application will run on port 3000. 🚀
 
 2. Open a web browser and navigate to `http://localhost:3000`. You can now view, edit, and manage your AWS DataPipeline jobs. 🎉
+
+## To Do
+- [ ] Create test coverage 🧪
+- [ ] Implement a CI/CD pipeline for automated testing and deployment 🔁
+- [ ] Migrate to AWS SDK for JavaScript (v3) 🔄
+- [ ] Improve error handling ❌
+- [ ] Display schedule infomation (e.g.Start 2023-04-05 07:16:20 (UTC) End 2024-04-04 07:16:20 (UTC) Period- Runs every 1 day) 📆
+- [ ] Display the current health status 💊
+- [ ] Add buttons to clone, activate, and deactivate a pipeline ⏯️
+- [ ] Improve UI for editing a job ✏️
 
 ## Contributing
 
