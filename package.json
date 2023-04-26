@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "mocha --exit",
-    "test-watch": "nodemon --exec 'npm test'",
-    "test-coverage": "nyc npm test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -18,10 +15,5 @@
     "bootstrap": "^5.2.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^10.2.0",
-    "supertest": "^6.3.3"
   }
 }
