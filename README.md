@@ -42,27 +42,21 @@ AWS DataPipeline Manager is an open-source web application that allows you to vi
 3. Install the required dependencies:
 
    ```
-   npm install
+   npm ci
    ```
 
-4. Set up your AWS credentials and region in the `app.js` file:
+4. Set up your AWS credentials and region:
 
-   ```javascript
-   AWS.config.update({
-     region: 'your_region',
-     accessKeyId: 'your_access_key',
-     secretAccessKey: 'your_secret_access_key',
-   });
+   ```bash
+   (echo AWS_REGION= && echo AWS_ACCESS_KEY= && echo AWS_SECRET_ACCESS_KEY=) > .env
    ```
-
-   Replace `'your_region'`, `'your_access_key'`, and `'your_secret_access_key'` with your AWS credentials.
 
 ## Usage
 
 1. Start the application:
 
    ```
-   node app.js
+   npm start
    ```
 
    By default, the application will run on port 3000. 🚀
