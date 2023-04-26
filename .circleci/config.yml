@@ -1,0 +1,28 @@
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: circleci/node:14
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-dependencies-{{ checksum "package-lock.json" }}
+            - node-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node-dependencies-{{ checksum "package-lock.json" }}
+      - run: npm test
+      - run:
+          name: "Upload coverage report"
+          command: |
+            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+              npx codecov
+            fi
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
