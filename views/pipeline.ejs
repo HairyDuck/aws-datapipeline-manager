@@ -24,6 +24,13 @@
           </div>
           <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
+
+        <h2>Pipeline Parameter Values (readonly)</h2>
+
+        <% for (let i = 0, len = pipelineDefinition.parameterValues.length; i < len; i++) { %>
+          <label for="pipelineDefinition-<%= pipelineDefinition.parameterValues[i].id %>"><%= pipelineDefinition.parameterValues[i].id %></label>
+          <textarea id="pipelineDefinition-<%= pipelineDefinition.parameterValues[i].id %>" class="form-control" readonly><%= pipelineDefinition.parameterValues[i].stringValue %></textarea>
+        <% } %>
       </div>
       <div class="col-md-6">
         <h2>Pipeline Actions</h2>
